@@ -1,0 +1,117 @@
+.wrapper {
+    padding: 0 120px;
+    position: relative;
+    margin-bottom: 156px;
+    max-width: 100%;
+}
+
+.img__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img__bg {
+    width: 90%;
+    animation: rorateImg 3s linear infinite;
+    // animation-iteration-count: infinite;
+}
+
+@keyframes rorateImg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.content {
+    position: absolute;
+    top: 196px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo__name {
+    font-size: 50px;
+    font-weight: 700;
+    rotate: 90deg;
+    animation: translateYText 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    animation-iteration-count: infinite;
+}
+
+@keyframes translateYText {
+    0%,
+    100% {
+        transform: translateX(18%) scaleX(-1);
+    }
+    50% {
+        transform: translateX(-20%) scaleX(-1);
+    }
+}
+
+.logo__vector {
+    position: relative;
+    left: 80px;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.title__left {
+    position: relative;
+    animation: transformTitle1 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes transformTitle1 {
+    to {
+        left: 0;
+    }
+    from {
+        left: -200px;
+    }
+}
+
+.title__right {
+    position: relative;
+    animation: transformTitle2 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes transformTitle2 {
+    to {
+        right: 0;
+    }
+    from {
+        right: -150px;
+    }
+}
+
+.sub__title {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 120px;
+    position: relative;
+    animation: transformSubTitle 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    animation-iteration-count: infinite;
+}
+
+@keyframes transformSubTitle {
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+    from {
+        opacity: 0;
+        bottom: -50px;
+    }
+}

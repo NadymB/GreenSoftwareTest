@@ -1,0 +1,138 @@
+.wrapper {
+    display: flex;
+    padding: 0 120px;
+}
+.content {
+    margin-top: 254px;
+}
+.title {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    text-align: left;
+    position: relative;
+}
+.sub__title {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 18px 0 39px 0;
+    position: relative;
+}
+
+.fadeIn__topBottom {
+    animation: topBottom 2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.fadeIn__leftRight {
+    animation: leftRight 2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes topBottom {
+    from {
+        opacity: 0;
+        top: -100px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes leftRight {
+    from {
+        opacity: 0;
+        left: -820px;
+    }
+    to {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+.button__wrap {
+    margin-top: 39px;
+    position: relative;
+}
+
+button {
+    padding: 15px 32px;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.explore__button {
+    background: linear-gradient(45deg, #8738eb, #ac9fff);
+    margin-right: 16px;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0 0 30px #620ecf;
+    }
+}
+
+.access__button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    position: relative;
+    cursor: pointer;
+
+    &:hover:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        border-radius: 16px;
+        width: 30%;
+        height: 3px;
+        background: linear-gradient(45deg, #ac9fff, #8738eb);
+        animation: transformRightLeft 1.5s linear infinite;
+    }
+
+    &:hover:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        border-radius: 16px;
+        width: 30%;
+        height: 3px;
+        background: linear-gradient(45deg, #8738eb, #ac9fff);
+        animation: transformLeftRight 1.5s linear infinite;
+    }
+}
+
+@keyframes transformRightLeft {
+    from {
+        right: 10px;
+    }
+    to {
+        right: 92px;
+    }
+}
+
+@keyframes transformLeftRight {
+    from {
+        left: 10px;
+    }
+    to {
+        left: 92px;
+    }
+}
+
+.tranform__img {
+    animation: rorateImg 5s linear infinite;
+    // animation-iteration-count: infinite;
+}
+
+@keyframes rorateImg {
+    0% {
+        transform: translateX(0) rotateX(0) rotateY(0deg);
+    }
+    50% {
+        transform: translateX(0) rotateX(0) rotateY(60deg);
+    }
+    100% {
+        transform: translateX(20%) rotateX(60deg) rotateY(180deg);
+    }
+}

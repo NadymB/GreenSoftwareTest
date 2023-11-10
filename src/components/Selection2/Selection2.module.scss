@@ -1,0 +1,198 @@
+.wrapper {
+    padding: 0 120px;
+    width: 100%;
+    max-width: 4438px;
+    overflow: hidden;
+    // position: relative;
+}
+
+.title {
+    text-align: center;
+    opacity: 0;
+}
+
+.title__animated {
+    text-align: center;
+    opacity: 1;
+    margin-bottom: 13px;
+    position: relative;
+    color: transparent;
+    overflow: hidden;
+    &:before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border-right: 2px solid #fff;
+        color: #fff;
+        -webkit-text-stroke: 0vw #fb60ae;
+        overflow: hidden;
+        animation: animateText 3s;
+    }
+}
+
+@keyframes animateText {
+    from {
+        width: 0;
+    }
+    to {
+        width: 26%;
+    }
+}
+
+.img {
+    filter: grayscale(0.8);
+    &:hover {
+        transform: scale(1.2);
+        filter: grayscale(0);
+    }
+}
+
+.img1 {
+    animation: transformImg1 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes transformImg1 {
+    from {
+        opacity: 0;
+        transform: translateX(-112%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.img2 {
+    animation: transformImg2 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes transformImg2 {
+    from {
+        opacity: 0;
+        transform: translateY(-110%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img3 {
+    animation: transformImg3 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes transformImg3 {
+    from {
+        opacity: 0;
+        transform: translateX(128%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.img4 {
+    animation: transformImg4 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes transformImg4 {
+    from {
+        opacity: 0;
+        transform: translateX(-112%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.img5 {
+    animation: transformImg5 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes transformImg5 {
+    from {
+        opacity: 0;
+        transform: translateY(110%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.img6 {
+    animation: transformImg6 1s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+}
+
+@keyframes transformImg6 {
+    from {
+        opacity: 0;
+        transform: translateX(128%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.btn__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+.btn {
+    padding: 15px 32px;
+    border-width: 1px;
+    border-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    border: 1px solid #fff;
+    background-color: transparent;
+    margin-bottom: 93px;
+    position: relative;
+    cursor: pointer;
+
+    &:hover:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        border-radius: 16px;
+        width: 30%;
+        height: 3px;
+        background: linear-gradient(45deg, #b7adf8, #fb60ae);
+        animation: transformRightLeft 1.5s linear infinite;
+    }
+
+    &:hover:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        border-radius: 16px;
+        width: 30%;
+        height: 3px;
+        background: linear-gradient(45deg, #fb60ae, #b7adf8);
+        animation: transformLeftRight 1.5s linear infinite;
+    }
+}
+@keyframes transformRightLeft {
+    from {
+        right: 12px;
+    }
+    to {
+        right: 68px;
+    }
+}
+
+@keyframes transformLeftRight {
+    from {
+        left: 12px;
+    }
+    to {
+        left: 68px;
+    }
+}
