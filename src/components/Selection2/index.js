@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 export const Selection2 = () => {
     const [showSelection, setShowSelection] = useState(false);
-    const controlNavbar = () => {
+    const controlSelection = () => {
         if (window.scrollY > 2600) {
             setShowSelection(true);
         } else {
@@ -16,9 +16,9 @@ export const Selection2 = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', controlNavbar);
+        window.addEventListener('scroll', controlSelection);
         return () => {
-            window.removeEventListener('scroll', controlNavbar);
+            window.removeEventListener('scroll', controlSelection);
         };
     });
     return (

@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 export const Slider = () => {
     const [showText, setShowText] = useState(false);
-    const controlNavbar = () => {
+    const controlSlider = () => {
         if (window.scrollY > 410) {
             setShowText(true);
         } else {
@@ -16,9 +16,9 @@ export const Slider = () => {
     };
 
     useEffect(() => {
-        window.addEventListener('scroll', controlNavbar);
+        window.addEventListener('scroll', controlSlider);
         return () => {
-            window.removeEventListener('scroll', controlNavbar);
+            window.removeEventListener('scroll', controlSlider);
         };
     });
 
